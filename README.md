@@ -1,20 +1,25 @@
-#Your Jenkins setup scripts are ready:
-jenkins_install.sh
-jenkins_service.sh
+✅ Usage Instructions:
+#Make scripts executable:
+chmod +x *.sh
+#Check current access:
+./check_access.sh
+#For local access only:
+./access_localhost.sh
+#For network access:
+./access_private_ip.sh
+#For public internet access:
+./access_public_ip.sh
+#For production setup with domain:
+./setup_nginx_proxy.sh
 
-✅ Instructions to Complete Installation:
+✅Quick Access URLs After Setup:
+#Method 1 - Localhost:
+http://localhost:8080
+#Method 2 - Private IP:
+http://[private-ip]:8080
+#Method 3 - Public IP:
+http://[public-ip]:8080
+#Method 4 - With Nginx:
+http://[public-ip]  # No port needed
 
-#Run the Jenkins install script:
-nano jenkins_install.sh
-chmod +x jenkins_install.sh
-./jenkins_install.sh
-
-#Run the Jenkins service script:
-nano jenkins_service.sh
-chmod +x jenkins_service.sh
-./jenkins_service.sh
-
-#Access Jenkins in your browser:
-http://YOUR_SERVER_IP_OR_DOMAIN:8080
-
-Do you want me to combine both scripts into a single jenkins_setup.sh file for easier execution?
+✅Allow port 8080 (or your selected port number) in the Azure inbound security rules.
